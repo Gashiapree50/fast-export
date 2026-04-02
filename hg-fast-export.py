@@ -490,7 +490,7 @@ def verify_heads(ui,repo,cache,force,ignore_unnamed_heads,branchesmap):
   branches={}
 
   for bn in repo.branchmap():
-    heads = repo.branchmap().branchheads(bn)
+    heads = repo.branchmap().branchheads(bn, closed=True)
     branches[bn] = branchtip(repo, heads)
   l=[(-repo.changelog.rev(n), n, t) for t, n in branches.items()]
   l.sort()
