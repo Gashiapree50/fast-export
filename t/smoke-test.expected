@@ -298,3 +298,25 @@ Added file in branch åäö
 from :41
 M 100644 :42 a0d01fcbff5d86327d542687dcfd8b299d054147
 
+blob
+mark :44
+data 24
+this-is-a-closed-branch
+
+commit refs/heads/this-is-a-closed-branch
+mark :45
+author Grevious Bodily Harmsworth <gbh@example.com> 1679083200 +0000
+committer Grevious Bodily Harmsworth <gbh@example.com> 1679083200 +0000
+data 45
+Added file in branch this-is-a-closed-branch
+from :43
+M 100644 :44 9d7dfd0ecce946dca320dd7826e5b9f97a0e9e79
+
+commit refs/heads/this-is-a-closed-branch
+mark :46
+author Grevious Bodily Harmsworth <gbh@example.com> 1679086800 +0000
+committer Grevious Bodily Harmsworth <gbh@example.com> 1679086800 +0000
+data 39
+Closing branch this-is-a-closed-branch
+from :45
+
