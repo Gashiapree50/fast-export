@@ -108,6 +108,8 @@ commit_rest() {
 	make-branch "_1" 17 &&
 	make-branch "Feature- 12V Vac \"Venom\"" 18 &&
 	make-branch "åäö" 19 &&
+	make-branch "this-is-a-closed-branch" 20 &&
+	close-branch "this-is-a-closed-branch" 21 &&
 
 	hg bookmark bm-for-the-rest
 	)
@@ -119,6 +121,11 @@ make-branch() {
     echo "$1" > $FILE
     hg add $FILE
     hg commit -d "2023-03-17 $2:00Z" -m "Added file in branch $1"
+}
+
+close-branch() {
+	hg branch "$1"
+	hg commit --close-branch -d "2023-03-17 $2:00Z" -m "Closing branch $1"
 }
 
 setup
